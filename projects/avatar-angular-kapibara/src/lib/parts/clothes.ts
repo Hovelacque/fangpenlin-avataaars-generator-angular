@@ -2,7 +2,7 @@ import { Clothes, ClothesColor, Graphic} from '../avatar.enum';
 import { ColorHelper } from './colors';
 
 export class ClothesHelper {
-
+   
   public static getClothesSvg(clothes: Clothes, color: ClothesColor, graphic: Graphic) {
     switch (clothes) {
       case Clothes.BLAZER_SHIRT:
@@ -28,6 +28,7 @@ export class ClothesHelper {
     }
   }
 
+   
   private static getBlazerShirt() {
     return `
     <g
@@ -91,6 +92,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getBlazerSweater() {
     return `
     <g
@@ -154,6 +156,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getCollarSweater(color: ClothesColor) {
     return `
     <g
@@ -182,6 +185,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getGraphicShirt(color: ClothesColor, g: Graphic) {
     return `
     <g
@@ -204,6 +208,7 @@ export class ClothesHelper {
       />${ ColorHelper.getClothesColor(color, 'shirt_mask')}${this._getgraphic(g, 'shirt_mask')}</g>`;
   }
 
+   
   private static getHoodie(color: ClothesColor) {
     return `
     <g id='Clothing/Hoodie' transform='translate(0.000000, 170.000000)'>
@@ -239,6 +244,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getOveralls(color: ClothesColor) {
     return `
     <g id='Clothing/Overall' transform='translate(0.000000, 170.000000)'>
@@ -275,6 +281,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getCrewNeckShirt(color: ClothesColor) {
     return `
     <g
@@ -314,6 +321,7 @@ export class ClothesHelper {
       </g>`;
   }
 
+   
   private static getScoopNeckShirt(color: ClothesColor) {
     return `
     <g
@@ -336,6 +344,7 @@ export class ClothesHelper {
       />${ColorHelper.getClothesColor(color, 'scoop_mask')}</g>`;
   }
 
+   
   private static getVNeckShirt(color: ClothesColor) {
     return `
     <g id='Clothing/Shirt-V-Neck' transform='translate(0.000000, 170.000000)'>
@@ -356,6 +365,7 @@ export class ClothesHelper {
       />${ColorHelper.getClothesColor(color, 'v_mask') }</g>`;
   }
 
+   
   private static _getgraphic(graphic: Graphic, maskId: String) {
     switch (graphic) {
       case Graphic.BAT:

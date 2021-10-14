@@ -19,6 +19,14 @@
       "avatar": [
         "dist/avatar/avatar",
         "dist/avatar"
+      ],
+      "angular-avatar": [
+        "dist/angular-avatar/angular-avatar",
+        "dist/angular-avatar"
+      ],
+      "avatar-angular-kapibara": [
+        "dist/avatar-angular-kapibara/avatar-angular-kapibara",
+        "dist/avatar-angular-kapibara"
       ]
     }
   }

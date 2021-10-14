@@ -12,12 +12,12 @@ Angular implementation of @fangpenlin's avataaars-generator
 ## Usage
 1) Install the library via standard npm command:
 
-`npm install --save avatar-angular`
+`npm install --save avatar-angular-kapibara`
 
 2) Import the `AvatarModule` into your Angular module:
 
 ```typescript
-import { AvatarModule } from 'avatar-angular';
+import { AvatarModule } from 'avatar-angular-kapibara';
 
 @NgModule({
   imports: [
@@ -34,7 +34,7 @@ export class AppModule { }
 `<avatar [options]="options"></avatar>`
 
 ```typescript
-import { AvatarOptions } from 'avatar-angular';
+import { AvatarOptions } from 'avatar-angular-kapibara';
 
 export class AppComponent implements OnInit {
 
@@ -77,7 +77,7 @@ AvatarOptions contains:
 
 ### How to get the options 
 ```typescript
-import { Accessories } from 'avatar-angular';
+import { Accessories } from 'avatar-angular-kapibara';
 
 export class AppComponent implements OnInit {
 

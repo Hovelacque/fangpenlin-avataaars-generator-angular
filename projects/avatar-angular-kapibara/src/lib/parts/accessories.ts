@@ -1,6 +1,7 @@
 import {Accessories} from '../avatar.enum';
 
 export class AccessoriesHelper {
+   
   public static getAccessorySvg(acc: Accessories) {
     switch (acc) {
       case Accessories.BLANK:
@@ -22,6 +23,7 @@ export class AccessoriesHelper {
     }
   }
 
+   
   private static getKurtaSvg() {
     return `
     <g
@@ -82,6 +84,7 @@ export class AccessoriesHelper {
       </g>`;
   }
 
+   
   private static getPresciption01() {
     return `
     <g
@@ -144,6 +147,7 @@ export class AccessoriesHelper {
       </g>`;
   }
 
+   
   private static getPresciption02() {
     return `
     <g

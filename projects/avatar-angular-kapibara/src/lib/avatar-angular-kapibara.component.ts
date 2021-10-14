@@ -10,7 +10,7 @@ import {AvatarOptions} from './avatar.enum';
   `,
   styles: []
 })
-export class AvatarComponent implements OnInit {
+export class AvatarAngularKapibaraComponent implements OnInit {
   @Input() options: AvatarOptions;
 
   constructor(private sanitizer: DomSanitizer) { }
@@ -22,3 +22,4 @@ export class AvatarComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustHtml(AvatarHelper.getSvg(this.options));
   }
 }
+

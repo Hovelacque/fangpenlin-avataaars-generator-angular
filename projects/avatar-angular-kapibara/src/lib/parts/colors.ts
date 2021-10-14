@@ -1,6 +1,7 @@
 import {FacialHairColor, HairColor, HatColor, Skin, ClothesColor} from '../avatar.enum';
 
 export class ColorHelper {
+   
   private static makeColor(hex: string, maskId: string) {
     return `<g
   id='Color/Palette/Gray-01'
@@ -11,26 +12,32 @@ export class ColorHelper {
     </g>`;
   }
 
+   
   public static getFacialHairColor(color: FacialHairColor, maskId: string) {
     return ColorHelper.makeColor(ColorHelper.getFacialHairColorHex(color), maskId);
   }
 
+   
   public static getHairColor(color: HairColor, maskId: string) {
     return ColorHelper.makeColor(ColorHelper.getHairColorHex(color), maskId);
   }
 
+   
   public static getHatColor(color: HatColor, maskId: string) {
     return ColorHelper.makeColor(ColorHelper.getHatColorHex(color), maskId);
   }
 
+   
   public static getSkinColor(skin: Skin, maskId: string) {
     return ColorHelper.makeColor(ColorHelper.getSkinColorHex(skin), maskId);
   }
 
+   
   public static getClothesColor(color: ClothesColor, maskId: string) {
     return ColorHelper.makeColor(ColorHelper.getClothesColorHex(color), maskId);
   }
 
+   
   public static getFacialHairColorHex(color: FacialHairColor) {
     switch (color) {
       case FacialHairColor.AUBURN:
@@ -56,6 +63,7 @@ export class ColorHelper {
     }
   }
 
+   
   public static getHairColorHex(color: HairColor) {
     switch (color) {
       case HairColor.AURBURN:
@@ -83,6 +91,7 @@ export class ColorHelper {
     }
   }
 
+   
   public static getHatColorHex(color: HatColor) {
     switch (color) {
       case HatColor.BLACK:
@@ -120,6 +129,7 @@ export class ColorHelper {
     }
   }
 
+   
   public static getSkinColorHex(skin: Skin) {
     switch (skin) {
       case Skin.TANNED:
@@ -141,6 +151,7 @@ export class ColorHelper {
     }
   }
 
+   
   private static getClothesColorHex(color: ClothesColor) {
     switch (color) {
       case ClothesColor.BLACK:
