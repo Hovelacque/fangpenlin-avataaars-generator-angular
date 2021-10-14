@@ -1,7 +1,5 @@
 # Avatar
 
-A simple Angular webcam component. Pure &amp; minimal, no Flash-fallback. 
-
 A Simple avatar generator based on <a href="https://github.com/shivam1410/fangpenlin-avataaars-generator-angular" target="_blank">shivam1410/fangpenlin-avataaars-generator-angular</a> but with portability to Angular
 
 ## FAGA
@@ -29,7 +27,7 @@ import { AvatarModule } from 'avatar-angular';
   ...
 })
 export class AppModule { }
-```typescript
+```
 
 3) Use the `AvatarComponent` on your pages:
 
@@ -56,7 +54,7 @@ As simple as that.
 ## Options and Events
 This section describes the basic inputs/outputs of the component. All inputs are optional.
 ### Inputs
-* `options: AvatarOptions`: An `Observable` to trigger image capturing. When it fires, an image will be captured and emitted (see Outputs).
+* `options: AvatarOptions`
 
 ## AvatarOptions
 ### AvatarOptions
