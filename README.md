@@ -1,31 +1,101 @@
-# FAGA
+# Avatar
+
+A simple Angular webcam component. Pure &amp; minimal, no Flash-fallback. 
+
+A Simple avatar generator based on <a href="https://github.com/shivam1410/fangpenlin-avataaars-generator-angular" target="_blank">shivam1410/fangpenlin-avataaars-generator-angular</a> but with portability to Angular
+
+## FAGA
 FAGA stands for Fangpenlin Avataaars Generator Angular
 
 ![alt text](https://raw.githubusercontent.com/shivam1410/fangpenlin-avataaars-generator-angular/master/src/assets/meta.png)
 
 Angular implementation of @fangpenlin's avataaars-generator
 
-## About
+## Usage
+1) Install the library via standard npm command:
 
-I tried to replicate the @fangpenlin's React based avatar generator in Angular version 6.<br>
-This project is just for self practice in angular.<br>
-People are welcomed to use, contribute, and share.<br>
-The `master` branch contains all the angular code.<br>
-and `gh-pages` branch contains the build files. 
-## Hosting
+`npm install --save avatar-angular`
 
-I have used free hosting provided by github, under the name github-pages.<br>
-[Avatar-Genrator](https://shivam1410.github.io/fangpenlin-avataaars-generator-angular/ "Create cool avatar")
+2) Import the `AvatarModule` into your Angular module:
 
-## CI
+```typescript
+import { AvatarModule } from 'avatar-angular';
 
-Used Github Action for continuous integration. Running the CI server on node v10.x provided by Github Actions.
-### Screenshots
+@NgModule({
+  imports: [
+    AvatarModule,
+    ...
+  ],
+  ...
+})
+export class AppModule { }
+```typescript
 
-![alt text](https://raw.githubusercontent.com/shivam1410/fangpenlin-avataaars-generator-angular/master/src/assets/Screenshot_CI.jpg)
+3) Use the `AvatarComponent` on your pages:
 
-## Open Source 
+`<avatar [options]="options"></avatar>`
 
-open to contributions.
-##
-Peace.Love.Code.
+```typescript
+import { AvatarOptions } from 'avatar-angular';
+
+export class AppComponent implements OnInit {
+
+  options: AvatarOptions;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.options = new AvatarOptions();
+    this.options.getRandom();
+  }
+}
+```
+
+As simple as that. 
+
+## Options and Events
+This section describes the basic inputs/outputs of the component. All inputs are optional.
+### Inputs
+* `options: AvatarOptions`: An `Observable` to trigger image capturing. When it fires, an image will be captured and emitted (see Outputs).
+
+## AvatarOptions
+### AvatarOptions
+AvatarOptions contains:
+* `style: AvatarStyle`
+* `top: Top`
+* `accessories: Accessories`
+* `hairColor: HairColor`
+* `facialHair: FacialHair`
+* `clothes: Clothes`
+* `clothColor: ClothesColor`
+* `eyes: Eyes`
+* `eyebrow: Eyebrow`
+* `mouth: Mouth`
+* `skin: Skin`
+* `hatColor: HatColor`
+* `facialHairColor: FacialHairColor`
+* `graphic: Graphic`
+* `face: Face`
+
+### How to get the options 
+```typescript
+import { Accessories } from 'avatar-angular';
+
+export class AppComponent implements OnInit {
+
+  accessories: Array<any>;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.accessories = this.getEnumTupple(Accessories);
+  }
+
+  getEnumTupple(enumRef: any): Array<any> {
+    return Object.keys(enumRef).map(key => {
+      return enumRef[key];
+
+    });
+  }
+}
+```
