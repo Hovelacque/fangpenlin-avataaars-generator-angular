@@ -1,6 +1,6 @@
 {
   "name": "avatar-angular-kapibara",
-  "version": "11.1.2",
+  "version": "14.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hovelacque/fangpenlin-avataaars-generator-angular.git"
@@ -12,10 +12,10 @@
   },
   "homepage": "https://github.com/Hovelacque/fangpenlin-avataaars-generator-angular#readme",  
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9"
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   }
 }
