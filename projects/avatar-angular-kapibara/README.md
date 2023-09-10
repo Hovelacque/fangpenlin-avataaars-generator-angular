@@ -13,7 +13,9 @@ Run `ng build avatar-angular-kapibara` to build the project. The build artifacts
 
 ## Publishing
 
-After building your library with `ng build avatar-angular-kapibara`, go to the dist folder `cd dist/avatar-angular-kapibara` and run `npm publish`.
+After building your library with `ng build avatar-angular-kapibara`, go to the dist folder `cd dist/avatar-angular-kapibara` and run `npm publish` 
+or 
+go to the dist folder `cd dist/avatar-angular-kapibara` and run `npm pack` and `npm i 'c:\..\..\dist\avatar-angular-kapibara\avatar-angular-kapibara-XX.XX.XX.tgz`.
 
 ## Running unit tests
 
