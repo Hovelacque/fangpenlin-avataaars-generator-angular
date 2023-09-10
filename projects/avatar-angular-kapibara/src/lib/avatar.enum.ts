@@ -1,73 +1,16 @@
+import { AvatarTranslateService } from "./avatar-options-translate.service";
 
-export class AvatarOptions {
-  style: AvatarStyle;
-  top: Top;
-  accessories: Accessories;
-  hairColor: HairColor;
-  facialHair: FacialHair;
-  clothes: Clothes;
-  clothColor: ClothesColor;
-  eyes: Eyes;
-  eyebrow: Eyebrow;
-  mouth: Mouth;
-  skin: Skin;
-  hatColor: HatColor;
-  facialHairColor: FacialHairColor;
-  graphic: Graphic;
-  face: Face;
+export class AvatarEnums {
+  value: string = '';
+  label: string = '';
+  translation:string = '';
 
-  constructor() {
-    this.style = AvatarStyle.CIRCLE;
-    this.top = Top.HIJAB;
-    this.face = Face.EYEBROW;
-    this.accessories = Accessories.KURTA;
-    this.hairColor = HairColor.BROWN;
-    this.facialHair = FacialHair.MOUSTACHE_MAGNUM;
-    this.clothes = Clothes.BLAZER_SHIRT;
-    this.clothColor = ClothesColor.GRAY1;
-    this.eyes = Eyes.WINK;
-    this.eyebrow = Eyebrow.ANGRY;
-    this.mouth = Mouth.SERIOUS;
-    this.skin = Skin.LIGHT;
-    this.hatColor = HatColor.BLACK;
-    this.facialHairColor = FacialHairColor.BLACK;
-    this.graphic = Graphic.SKULL;
-  }
-
-
-  getRandom() {
-    this.style = this.genrateRandom(AvatarStyle);
-    this.top = this.genrateRandom(Top);
-    this.face = this.genrateRandom(Face);
-    this.accessories = this.genrateRandom(Accessories);
-    this.hairColor = this.genrateRandom(HairColor);
-    this.facialHair = this.genrateRandom(FacialHair);
-    this.clothes = this.genrateRandom(Clothes);
-    this.clothColor = this.genrateRandom(ClothesColor);
-    this.eyes = this.genrateRandom(Eyes);
-    this.eyebrow = this.genrateRandom(Eyebrow);
-    this.mouth = this.genrateRandom(Mouth);
-    this.skin = this.genrateRandom(Skin);
-    this.hatColor = this.genrateRandom(HatColor);
-    this.facialHairColor = this.genrateRandom(FacialHairColor);
-    this.graphic = this.genrateRandom(Graphic);
-
-  }
-
-  private genrateRandom(enu: any) {
-    const e =this.getEnumTuple(enu);
-    const len = (Object.keys(e).length) - 1;
-    const item = (Math.floor(Math.random() * len) + 0);
-    return e[item];
-  }
-  private getEnumTuple(enumRef: any): Array<any> {
-    return Object.keys(enumRef).map(key => {
-      return enumRef[key];
-    });
-
+  constructor(value: string, label: string) {
+    this.value = value;
+    this.label = label;
+    this.translation = AvatarTranslateService.translate(label)
   }
 }
-
 
 export enum Accessories {
   BLANK = 'blank',

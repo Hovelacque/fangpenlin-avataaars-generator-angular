@@ -1,8 +1,8 @@
-import { AvatarOptions } from '../avatar.enum';
 import { ColorHelper } from './colors';
 import { ClothesHelper } from './clothes';
 import { FaceHelper } from './face';
 import { TopsHelper } from './tops';
+import { AvatarOptions } from '../avatar-options';
 
 export class AvatarHelper {
 
