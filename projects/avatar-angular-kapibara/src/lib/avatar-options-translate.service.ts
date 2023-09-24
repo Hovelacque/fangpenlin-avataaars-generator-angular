@@ -72,6 +72,7 @@ export class AvatarTranslateService {
         { texto: "facialHairColor_platinum", traducao: "" },
         { texto: "facialHairColor_red", traducao: "" },
         { texto: "facialHairColor_silver_red", traducao: "" },
+        // { texto: "facialHairColor_platinum", traducao: "" },
         //FacialHair
         { texto: "facialHair_BLANK", traducao: "" },
         { texto: "facialHair_beard_medium", traducao: "" },
@@ -91,6 +92,7 @@ export class AvatarTranslateService {
         { texto: "graphic_bear", traducao: "" },
         { texto: "graphic_skulloutline", traducao: "" },
         { texto: "graphic_skull", traducao: "" },
+        // { texto: "graphic_ deer", traducao: "" },
         //HairColor 
         { texto: "hairColor_aurburn", traducao: "" },
         { texto: "hairColor_black", traducao: "" },
